@@ -21,7 +21,6 @@ object Command {
       case "set-deferred" => SetDeferred.asRight
       case "read-number" => ReadNumber.asRight
       case cmd =>
-
         cmd.split(" ").toList match {
           case List("run-fiber", IntString(durationSec)) =>
             RunFiber(durationSec).asRight
